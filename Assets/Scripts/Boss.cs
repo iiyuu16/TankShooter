@@ -11,28 +11,23 @@ public class Boss : MonoBehaviour
     public GameObject enemyProj;
     public GameObject enemyProj2;
     public GameObject enemyProj3;
-    public GameObject enemyProj4;
     public GameObject ProjectilePostition;
     public GameObject ProjectilePostition2;
     public GameObject ProjectilePostition3;
-    public GameObject ProjectilePostition4;
     public GameObject Explosion;
     public GameObject Clash;
     GameController gameController;
     float fireInterval;
     float fireInterval2;
     float fireInterval3;
-    float fireInterval4;
     float waitToFire;
     float waitToFire2;
     float waitToFire3;
-    float waitToFire4;
     public int bossHP = 5;
     public float bossPos = 4f;
     private int randomNo;
     private int randomNo2;
     private int randomNo3;
-    private int randomNo4;
 
     private void Awake()
     {
@@ -62,8 +57,6 @@ public class Boss : MonoBehaviour
         fireInterval3 = randomNo3;
         waitToFire3 = fireInterval3;
 
-        fireInterval4 = randomNo4;
-        waitToFire4 = fireInterval4;
     }
 
     // Update is called once per frame
@@ -100,7 +93,6 @@ public class Boss : MonoBehaviour
         waitToFire -= Time.deltaTime;
         waitToFire2 -= Time.deltaTime;
         waitToFire3 -= Time.deltaTime;
-        waitToFire4 -= Time.deltaTime;
 
         if (waitToFire < -1)
         {
@@ -119,12 +111,6 @@ public class Boss : MonoBehaviour
             FireProjectile3();
             waitToFire3 = fireInterval3;
         }
-
-        if (waitToFire4 < -1)
-        {
-            FireProjectile4();
-            waitToFire4 = fireInterval4;
-        }
     }
 
     void FireProjectile1()
@@ -141,11 +127,6 @@ public class Boss : MonoBehaviour
     {
         GameObject enemyproj3 = (GameObject)Instantiate(enemyProj3);
         enemyproj3.transform.position = ProjectilePostition3.transform.position;
-    }
-    void FireProjectile4()
-    {
-        GameObject enemyproj4 = (GameObject)Instantiate(enemyProj4);
-        enemyproj4.transform.position = ProjectilePostition4.transform.position;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -189,7 +170,6 @@ public class Boss : MonoBehaviour
             randomNo = Random.Range(0, 4);
             randomNo2 = Random.Range(0, 4);
             randomNo3 = Random.Range(0, 4);
-            randomNo4 = Random.Range(0, 4);
 
             yield return new WaitForSeconds(3f);
         }

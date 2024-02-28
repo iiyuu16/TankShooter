@@ -9,7 +9,6 @@ public class PlayerController1 : MonoBehaviour
 {
     public static PlayerController1 playerController;
     public float speed;
-    public Animator anim;
     public GameObject Projectile;
     public GameObject projectilePosition;
     public float fireInterval = .3f;
@@ -83,27 +82,14 @@ public class PlayerController1 : MonoBehaviour
         posP1.x = Mathf.Clamp(posP1.x, min.x, max.x);
         posP1.y = Mathf.Clamp(posP1.y, min.y, max.y);
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            anim.SetInteger("up", 1);
-        }
-        else
-        {
-            anim.SetInteger("up", 0);
-        }
-        
-        if(Input.GetKey(KeyCode.S))
-        {
-            anim.SetInteger("down", -1);
-        }
-        else
-        {
-            anim.SetInteger("down", 0);
-        }
-
         transform.position = posP1;
-
     }
+
+    void Aim(Vector2 direction)
+    {
+        //rotate barrel
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -153,7 +139,7 @@ public class PlayerController1 : MonoBehaviour
         else
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
-            if (currentSceneName == "1P_SpaceShooter")
+            if (currentSceneName == "1P_TankShooter")
             {
                 gameController.GameOver1_1P();
             }
@@ -161,7 +147,7 @@ public class PlayerController1 : MonoBehaviour
             {
                 gameController.GameOver2_1P();
             }
-            else if (currentSceneName == "2P_SpaceShooter")
+            else if (currentSceneName == "2P_TankShooter")
             {
                 gameController.GameOver1_2P();
             }

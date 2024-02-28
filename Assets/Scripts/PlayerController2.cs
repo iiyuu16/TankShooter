@@ -84,26 +84,13 @@ public class PlayerController2 : MonoBehaviour
         posP2.x = Mathf.Clamp(posP2.x, min.x, max.x);
         posP2.y = Mathf.Clamp(posP2.y, min.y, max.y);
 
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            anim.SetInteger("up", 1);
-        }
-        else
-        {
-            anim.SetInteger("up", 0);
-        }
-
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            anim.SetInteger("down", -1);
-        }
-        else
-        {
-            anim.SetInteger("down", 0);
-        }
-
         transform.position = posP2;
 
+    }
+
+    void Aim()
+    {
+        //rotate barrel
     }
 
     private void OnTriggerEnter2D(Collider2D other)
