@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 1aae63052e52d8b4888fb80f2930f4ac
+  - enabled: 1
+    path: Assets/Scenes/1P_TankShooter.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/1P_BossLevel.unity
+    guid: b55ac62631c80e640a565a967ed22c05
+  - enabled: 1
+    path: Assets/Scenes/2P_TankShooter.unity
+    guid: d6c6fc7d2d7337e4f9c858fbf6a03912
+  - enabled: 1
+    path: Assets/Scenes/2P_BossLevel.unity
+    guid: 23f26bfe41fd11f44a97baae19e4182e
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: ec0a9f40a283e6447939efc3f4f10468
+  m_configObjects: {}
