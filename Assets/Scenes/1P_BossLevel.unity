@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Warning!!!
+  m_text: Eliminate the elite Tank!!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d20c7300675b98043ae9d299770aab3a, type: 2}
   m_sharedMaterial: {fileID: -1048038877465748946, guid: d20c7300675b98043ae9d299770aab3a, type: 2}
@@ -2643,6 +2643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f615d05d6e0a949a38aac956612d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startMin: 2
   currentTimeText: {fileID: 42110875}
 --- !u!4 &1258700852
 Transform:

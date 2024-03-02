@@ -1,8 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class PlayerController1 : MonoBehaviour
@@ -84,12 +81,6 @@ public class PlayerController1 : MonoBehaviour
 
         transform.position = posP1;
     }
-
-    void Aim(Vector2 direction)
-    {
-        //rotate barrel
-    }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {

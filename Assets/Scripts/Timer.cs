@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 {
     bool timerActive = false;
     float currentTime;
-    int startMin = 3;
+    public int startMin = 2;
     public TextMeshProUGUI currentTimeText;
 
     private void Awake()
@@ -31,11 +31,11 @@ public class Timer : MonoBehaviour
                 timerActive = false;
 
                 string currentSceneName = SceneManager.GetActiveScene().name;
-                if (currentSceneName == "1P_SpaceShooter")
+                if (currentSceneName == "1P_TankShooter")
                 {
                     GameController.gameController.BossBattle_1P();
                 }
-                else if (currentSceneName == "2P_SpaceShooter")
+                else if (currentSceneName == "2P_TankShooter")
                 {
                     GameController.gameController.BossBattle_2P();
                 }
