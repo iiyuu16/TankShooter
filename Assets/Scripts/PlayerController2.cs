@@ -9,7 +9,6 @@ public class PlayerController2 : MonoBehaviour
 {
     public static PlayerController2 playerController;
     public float speed;
-    public Animator anim;
     public GameObject Projectile;
     public GameObject projectilePosition;
     public float fireInterval = .3f;
@@ -144,7 +143,7 @@ public class PlayerController2 : MonoBehaviour
         else
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
-            if (currentSceneName == "1P_SpaceShooter")
+            if (currentSceneName == "1P_TankShooter")
             {
                 gameController.GameOver1_1P();
             }
@@ -152,7 +151,7 @@ public class PlayerController2 : MonoBehaviour
             {
                 gameController.GameOver2_1P();
             }
-            else if (currentSceneName == "2P_SpaceShooter")
+            else if (currentSceneName == "2P_TankShooter")
             {
                 gameController.GameOver1_2P();
             }

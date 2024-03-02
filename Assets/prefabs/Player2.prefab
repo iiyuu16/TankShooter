@@ -98,7 +98,6 @@ GameObject:
   m_Component:
   - component: {fileID: 560408877458511607}
   - component: {fileID: 8824973417071023917}
-  - component: {fileID: 6663440222289033861}
   - component: {fileID: 6414481556238058767}
   - component: {fileID: 5477534815981591894}
   m_Layer: 6
@@ -176,27 +175,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6663440222289033861
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7703024838360990790}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92cd551c4574a9846be6168167002347, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &6414481556238058767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -255,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  anim: {fileID: 6663440222289033861}
+  anim: {fileID: 0}
   Projectile: {fileID: 3338541253016556280, guid: 0aeb4c20013fd2f4e832855315c0bab5, type: 3}
   projectilePosition: {fileID: 5007263717125612786}
   fireInterval: 0.3

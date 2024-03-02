@@ -1,18 +1,22 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerBase : MonoBehaviour
 {
-    public int maxHP = 50;
-    public int maxShield = 10;
-    private int currentHP;
-    private int currentShield;
+    public float maxHP = 20f;
+    public float maxShield = 10f;
+
+    public float currentHP;
+    public float currentShield;
 
     public GameObject Explosion;
     public GameObject Clash;
     public GameController gameController;
+
+    private Coroutine shieldRegenCoroutine;
+    private bool isShieldRegenerating = false;
+    private float timeSinceLastHit = 0f;
 
     void Start()
     {
@@ -22,7 +26,11 @@ public class PlayerBase : MonoBehaviour
 
     void Update()
     {
-        CheckBaseStatus();
+        timeSinceLastHit += Time.deltaTime;
+        if (timeSinceLastHit >= 5f && !isShieldRegenerating && currentShield < maxShield)
+        {
+            StartShieldRegeneration();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -34,32 +42,33 @@ public class PlayerBase : MonoBehaviour
             if (currentShield > 0)
             {
                 currentShield--;
-                GameObject clash = (GameObject)Instantiate(Clash);
+                GameObject clash = Instantiate(Clash);
                 gameController.PlayExplosion(gameController.hitSFX);
-                explosion.transform.position = expos;
-                Debug.Log(" "+currentShield);
+                clash.transform.position = expos;
+                Debug.Log("Shield: " + currentShield);
             }
-
             else
             {
                 currentHP--;
-                GameObject explosion = (GameObject)Instantiate(Explosion);
+                GameObject explosion = Instantiate(Explosion);
                 gameController.PlayExplosion(gameController.explosionSFX);
                 explosion.transform.position = expos;
-                Debug.Log(" "+currentHP);
+                Debug.Log("HP: " + currentHP);
+                CheckBaseStatus();
             }
 
-
-
+            timeSinceLastHit = 0f; // Reset time since last hit
             Destroy(other.gameObject);
         }
     }
-    
+
     private void CheckBaseStatus()
     {
-        if(currentHP <= 0)
+        if (currentHP <= 0)
         {
-        string currentSceneName = SceneManager.GetActiveScene().name;
+            Time.timeScale = 0;
+
+            string currentSceneName = SceneManager.GetActiveScene().name;
             if (currentSceneName == "1P_TankShooter")
             {
                 gameController.GameOver1_1P();
@@ -77,5 +86,29 @@ public class PlayerBase : MonoBehaviour
                 gameController.GameOver2_2P();
             }
         }
+    }
+
+    private void StartShieldRegeneration()
+    {
+        shieldRegenCoroutine = StartCoroutine(ShieldRegenerationCoroutine());
+    }
+
+    private IEnumerator ShieldRegenerationCoroutine()
+    {
+        isShieldRegenerating = true;
+
+        while (currentShield < maxShield)
+        {
+            yield return new WaitForSeconds(1f); // Wait for 1 second before regenerating shield
+            currentShield++;
+            Debug.Log("Shield Regenerated: " + currentShield);
+        }
+
+        isShieldRegenerating = false; // Reset the flag when shield regeneration is complete
+    }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines(); // Stop all coroutines when the object is destroyed
     }
 }
