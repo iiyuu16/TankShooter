@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 165970604}
   - component: {fileID: 165970603}
   m_Layer: 0
-  m_Name: IemSpawner
+  m_Name: ItemSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3564,7 +3564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.65882355, g: 0.65882355, b: 0.65882355, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3890,8 +3890,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2514697655676778663, guid: 143dea8895ef1c34b948235a1230d13f, type: 3}
   xPosMax: 12
   xPosMin: 10
-  yPosMax: 4.5
-  yPosMin: -4.5
+  yPosMax: 4.25
+  yPosMin: -4.25
   difficultyMult: 0
 --- !u!4 &1726037433
 Transform:
@@ -4198,7 +4198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.65882355, g: 0.65882355, b: 0.65882355, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

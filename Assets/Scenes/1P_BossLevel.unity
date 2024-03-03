@@ -474,7 +474,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1258700848}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -1407,7 +1407,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1258700848}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -1582,7 +1582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.65882355, g: 0.65882355, b: 0.65882355, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1639,8 +1639,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2514697655676778663, guid: 143dea8895ef1c34b948235a1230d13f, type: 3}
   xPosMax: 12
   xPosMin: 10
-  yPosMax: 4.5
-  yPosMin: -4.5
+  yPosMax: 4.25
+  yPosMin: -4.25
   difficultyMult: 0
 --- !u!4 &817330640
 Transform:
@@ -1740,7 +1740,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1258700848}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -1946,7 +1946,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1258700848}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
@@ -3195,7 +3195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.65882355, g: 0.65882355, b: 0.65882355, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3622,7 +3622,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1258700848}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
@@ -3920,7 +3920,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1258700848}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1

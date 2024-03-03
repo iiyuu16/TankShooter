@@ -32,12 +32,12 @@ public class MainMenu : MonoBehaviour
 
     public void start_1P()
     {
-        SceneManager.LoadScene("1P_SpaceShooter");
+        SceneManager.LoadScene("1P_TankShooter");
     }
 
     public void start_2P()
     {
-        SceneManager.LoadScene("2P_SpaceShooter");
+        SceneManager.LoadScene("2P_TankShooter");
     }
 
     public void QuitGame()

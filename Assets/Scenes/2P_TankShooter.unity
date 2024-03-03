@@ -1221,7 +1221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.65882355, g: 0.65882355, b: 0.65882355, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1323,7 +1323,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512398093}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0db51a5a54925e4c93d3d7e2d65aa5e, type: 3}
   m_Name: 
@@ -1536,7 +1536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.65882355, g: 0.65882355, b: 0.65882355, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5215,9 +5215,9 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2514697655676778663, guid: 143dea8895ef1c34b948235a1230d13f, type: 3}
   xPosMax: 12
   xPosMin: 10
-  yPosMax: 4.5
-  yPosMin: -4.5
-  difficultyMult: 0
+  yPosMax: 4.25
+  yPosMin: -4.25
+  difficultyMult: -2.4
 --- !u!4 &2060808814
 Transform:
   m_ObjectHideFlags: 0
